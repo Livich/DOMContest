@@ -6,7 +6,7 @@
  * Time: 18:26
  */
 
-namespace DomContest\Tests;
+namespace DomContest;
 
 use PHPUnit_Framework_TestCase;
 
