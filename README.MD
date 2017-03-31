@@ -4,7 +4,7 @@ This project tests such popular PHP DOM parsers as DiDOM, Dimple HTML DOM and Si
 
 _Setup:_
 * Run setup.sh
-* Open project using PHPStorm and run tests or run PHPUnit with custom configuration from `/DomContest/phpunit.xml`
+* Run `phpunit -c ./src/phpunit.xml ./src/DomContest/` or open project using PHPStorm and run tests via GUI.
 
 ## Current results
 

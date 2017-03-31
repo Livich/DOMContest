@@ -16,6 +16,7 @@ class ProtoCase extends PHPUnit_Framework_TestCase
     const SELECTOR_TYPE_CSS = 'css';
     const SELECTOR_TYPE_XPATH = 'xp';
     private $marinaHTML;
+    protected $parserName = 'undefined';
 
     protected function profileStart() {
         return array(
@@ -64,5 +65,21 @@ class ProtoCase extends PHPUnit_Framework_TestCase
                 break;
         }
         return null;
+    }
+
+    public function getFromLargeDOM($html){
+	return null;
+    }
+
+    private function profiledTest($scale){
+	$html = str_replace('<li>Access all your bookings</li>', $this->getLargeHTML($scale), $this->getMarinaHTML());
+	$profile = $this->profileStart();
+	$elements = $this->getFromLargeDOM($html);
+	$result = $this->profileStop($profile);
+	$this->assertTrue(count($elements) > 0, $this->parserName.' can parse large DOM');
+    }
+
+    public function test500(){
+	$profile = $this->profiledTest(500);
     }
 }
