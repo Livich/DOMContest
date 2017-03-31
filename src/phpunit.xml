@@ -10,6 +10,9 @@
          stopOnFailure="false"
          syntaxCheck="false"
          timeoutForLargeTests="360">
+    <listeners>
+        <listener class="StatisticsListener" file="StatisticsListener.php" />
+    </listeners>
     <testsuites>
         <testsuite name="DOM Contest">
             <directory>./src/</directory>
