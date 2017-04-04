@@ -106,6 +106,7 @@ class ProtoCase extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @group heavyTests
      * @large
      */
     public function test1500()
@@ -114,6 +115,7 @@ class ProtoCase extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @group heavyTests
      * @large
      */
     public function test2000()

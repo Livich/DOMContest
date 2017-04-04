@@ -60,7 +60,12 @@ class StatisticsListener extends PHPUnit_Framework_BaseTestListener
                 }
                 $lines[$scale] = '|' . $scale . ' nodes|'. $lines[$scale];
             }
-            array_unshift($lines, $header);
+            $header.=PHP_EOL;
+            foreach(explode('|', $header) as $heading){
+                if(strlen(chop($heading))<=0) continue;
+                $header.='|'.str_repeat('-',strlen($heading));
+            }
+            array_unshift($lines, $header.'|');
             return implode(PHP_EOL, $lines);
         }
     }

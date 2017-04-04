@@ -1,7 +1,8 @@
 {
     "require": {
         "paquettg/php-html-parser": "^1.7",
-        "imangazaliev/didom": "^1.9"
+        "imangazaliev/didom": "^1.9",
+        "querypath/QueryPath": ">=3.0.0"
     },
 
     "autoload": {
